@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Profile: <%= user.username %></h1>
+  <h3>Bio</h3>
+  <!-- Intentionally unescaped to demonstrate XSS -->
+  <div class="bio"><%= user.bio %></div>
+  <p><a href="/">Home</a> | <a href="/logout">Logout</a></p>
+</body>
+</html>
